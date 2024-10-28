@@ -33,10 +33,10 @@ export async function POST(req) {
       total_amount: amount,
       currency: 'BDT',
       tran_id,
-      success_url: 'https://www.mbhec.edu.bd/api/success',
-      fail_url: 'https://www.mbhec.edu.bd/api/fail',
-      cancel_url: 'https://www.mbhec.edu.bd/api/cancel',
-      ipn_url: 'https://www.mbhec.edu.bd/api/ipn',
+      success_url: 'www.mbhec.edu.bd/api/success',
+      fail_url: 'www.mbhec.edu.bd/api/fail',
+      cancel_url: 'www.mbhec.edu.bd/api/cancel',
+      ipn_url: 'www.mbhec.edu.bd/api/ipn',
       shipping_method: 'NO',
       product_name: 'N/A',
       product_category: 'N/A',
@@ -52,9 +52,9 @@ export async function POST(req) {
     };
 
     const sslcz = new SSLCommerzPayment(
-      'test6717ab6bc2044',
-      'test6717ab6bc2044@ssl',
-      false
+      'mbhecedubdlive',
+      '6718DA76AEE2031208',
+      true
     );
 
     const apiResponse = await sslcz.init(data);
