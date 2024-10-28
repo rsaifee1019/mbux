@@ -196,6 +196,7 @@ const AdmissionForm = () => {
   };
 
   return (
+       <Suspense fallback={<div>Loading...</div>}>
     <SearchParamsWrapper>
     <Card className="w-full max-w-4xl mx-auto">
       <CardHeader className="text-center">
@@ -535,6 +536,7 @@ const AdmissionForm = () => {
       </CardContent>
     </Card>
     </SearchParamsWrapper>
+            </Suspense>
   );
 };
 
